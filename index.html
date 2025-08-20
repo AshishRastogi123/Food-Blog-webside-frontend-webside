@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url("src/bg-food.webp");
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      text-align: center;
+
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hi {
+
+      margin-left: 5%;
+
+
+    }
+
+    .max {
+      max-width: 100%;
+
+    }
+
+    #paneer {
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    #paneerp {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .ser {
+      margin-left: 10%;
+    }
+
+    .btn-custom {
+      background-color: rgb(196, 113, 35);
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: rgb(176, 103, 30);
+      /* Darken the button on hover */
+    }
+
+    .about-me {
+      padding: 50px 0;
+    }
+
+    .about-me img {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .about-me-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .about-me h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-me p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .about-food {
+      padding: 50px 0;
+    }
+
+    .about-food-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .about-food h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-food p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .about-food video {
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+    }
+
+    #services h1 {
+
+      margin-top: 4%;
+      margin-bottom: 4%;
+      font-size: 60px;
+      text-align: center;
+      color: #e79211;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    .car {
+      margin: 5%;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 30px 0;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .store-buttons img {
+      width: 150px;
+      margin: 10px 5px;
+    }
+
+    .insta {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      margin: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="preloader-container">
+      <div id="preloader-wrap">
+        <div id="preloader"></div>
+      </div>
+    </div>
+    <!-- here we would  start navbar -->
+
+    <nav class=" bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="src/Swadishta.png" alt="Logo" width="100%" height="50"
+              class="d-inline-block align-text-top"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <form class="d-flex  " role="search">
+
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" list="hi">
+            <button class="btn btn-outline-success btn-outline-danger pi" type="submit">Search</button>
+          </form>
+
+          <div class="collapse navbar-collapse ser" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#serv">Services</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Order</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Lunch</a></li>
+                  <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                </ul>
+              <li class="nav-item">
+                <a class="nav-link active" href="#consa">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <a href="signup.html" class="btn btn-primary ms-auto btn-danger">Sign Up</a>
+      </nav>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner max">
+        <div class="carousel-item active">
+          <img src="src/tikka.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block hi">
+            <h5 id="paneer">Spacial Paneer Tikka</h5>
+            <p>Savor the smoky, spicy goodness of Paneer Tikka – the perfect blend of flavors in every bite</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/image21.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="background-color: #e79211;">
+            <h1 id="paneer">Panjabi Lunch</h1>
+            <p id="paneerp">It is best sale product. try somethis new Some representative placeholder content for the
+              second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/image3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 id="paneer">Pizza with Chees</h1>
+            <p id="paneerp">"Indulge in the ultimate cheesy delight – pizza loaded with extra cheese, just the way you
+              love it!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- card -->
+    <section class="about-me">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side: Image -->
+          <div class="col-md-5 text-center">
+            <img src="src/my_photo.jpeg" alt="About Me Image" class="img-fluid">
+          </div>
+          <!-- Right Side: Content -->
+          <div class="col-md-7 about-me-content">
+            <h2 id="about">About Me</h2>
+            <p>
+              Hello! I am Ashish Kumar Rastogi Co-founder at Swadistha. I am passionate about Web development and
+              Comapany Ceo With 5+ years of experience in Management Field, I have developed a deep understanding of Web
+              design and market.
+            </p>
+            <p>
+              In my free time, I enjoy Movies and Biographies. My mission is to Reach Every Indian with our Food
+              Services, and I love connecting with
+              people who share similar passions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-food">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side: Content -->
+          <div class="col-md-6 about-food-content">
+            <h2>About Food</h2>
+            <p>
+              Food is not just fuel for our bodies; it is an experience that brings people together. From the rich
+              flavors of spices
+              to the comforting warmth of homemade meals, food reflects culture, love, and creativity.
+            </p>
+            <p>
+              Explore the world through your taste buds and embrace the art of cooking. Whether it’s savoring
+              traditional dishes
+              or experimenting with new recipes, food has the power to connect and nourish the soul.
+            </p>
+          </div>
+          <!-- Right Side: Video -->
+          <div class="col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xPPLbEFbCAo"
+              title="YouTube video player" frameborder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <h1>Our Services</h1>
+    </section>
+    <div class="card-group" id="serv">
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/burger.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Pancake</b></h5>
+          <p class="card-text">Fluffy, golden-brown pancakes stacked high, a perfect breakfast treat. Top them with
+            syrup, fruits, or whipped cream for a delicious start to your day!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 4 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/burger2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Bunny Burge</b>r</h5>
+          <p class="card-text">Hop into flavor with our Bunny Burger – a juicy delight packed with fresh veggies and
+            irresistible taste in every bite!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 9 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/burger 3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Classical Burger</b></h5>
+          <p class="card-text">Sink your teeth into the timeless taste of a Classic Burger! Juicy, perfectly seasoned
+            patty layered with fresh lettuce, ripe tomatoes, crispy onions, and creamy cheese, all tucked inside a
+            toasted bun. A flavor that never goes out of style!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 14 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/laddu.avif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Boondi Laddu</b></h5>
+          <p class="card-text">Indulge in the sweetness of Boondi Laddu, a traditional treat made from golden boondi
+            pearls and rich ghee. Perfect for every celebration, it’s a bite of pure joy!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 16 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/laddu3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Beson Laddu</b></h5>
+          <p class="card-text">
+            Relish the rich, nutty flavor of Besan Laddu, made with roasted gram flour, ghee, and a hint of cardamom.
+            Melt-in-your-mouth sweetness that's perfect for any occasion—simple, soulful, and satisfying!"</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/laddu2.avif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Motichor Laddu</b></h5>
+          <p class="card-text">TDelight in the melt-in-your-mouth goodness of Motichoor Laddu, made with tiny, soft
+            boondi pearls soaked in sugar syrup. Infused with the rich aroma of ghee and a hint of cardamom, this
+            classic treat is a favorite for every celebration. Perfectly sweet and irresistibly delicious</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/mix-item.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Tikki and Samosha</b></h5>
+          <p class="card-text">Treat yourself to the crispy delight of Tikki and Samosa – golden-fried perfection filled
+            with spicy flavors. Whether it's the potato-filled samosa or the crunchy aloo tikki, they’re the ultimate
+            snack-time favorites!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 17 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/mix.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Yellow Mix Sweet</b></h5>
+          <p class="card-text">Delight in the vibrant charm of yellow mix sweets – a symphony of flavors and textures
+            crafted with saffron, ghee, and rich ingredients. A perfect treat for every festive occasion!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 10 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/mixing.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>All Mix Sweet</b></h5>
+          <p class="card-text">Savor the goodness of all mix sweets – a delightful assortment of flavors, textures, and
+            colors, from creamy barfis to juicy gulab jamuns. Perfect for every celebration and every sweet tooth!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 18 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/chaumeen.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Chaumeen</b></h5>
+          <p class="card-text">Dig into the spicy, savory flavors of Chowmein – stir-fried noodles loaded with fresh
+            veggies, zesty sauces, and your choice of protein. A street food classic that hits all the right notes!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 8 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/dosa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>South Indian Dosa</b></h5>
+          <p class="card-text">Experience the crisp and golden perfection of South Indian Dosa – a thin rice and lentil
+            crepe served with flavorful chutneys and spicy sambhar. A delicious bite of tradition in every fold!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 12 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/foodi.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Evergreen Pizza</b></h5>
+          <p class="card-text">Satisfy your cravings with Evergreen Pizza – a timeless classic loaded with fresh
+            veggies, gooey cheese, and a perfectly baked crust. A slice of happiness in every bite!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 15 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/popcon.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Popcorn</b></h5>
+          <p class="card-text">The ultimate snack for every mood and moment! Light, crunchy, and bursting with flavor,
+            whether buttery, cheesy, or caramel-coated. Perfect for movie nights or anytime cravings!.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 19 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/pizza2.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Vegitable Pizza</b> </h5>
+          <p class="card-text">Delight in the freshness of Vegetable Pizza – a colorful medley of garden-fresh toppings
+            like bell peppers, tomatoes, onions, and olives, all layered over a cheesy, golden crust. A wholesome and
+            flavorful feast for all!</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 13 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card car" style="background-color: rgb(205, 174, 174);">
+        <img src="src/samose1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Simple Samosa</b></h5>
+          <p class="card-text">Enjoy the classic taste of a Simple Samosa – a crispy, golden crust filled with spiced
+            potatoes and peas. Perfectly paired with tangy chutneys for a timeless snack.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" id="consa">
+    <div class="container">
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Order Now</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Social Media and App Store Links -->
+        <div class="col-md-4 text-center">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="mailto:rastogiashish836@gmail.com" class="insta"><img src="src/gmail.png" class="insta"></a>
+            <a href="https://www.instagram.com/ashishrastogi270?igsh=YzljYTk1ODg3Zg==" class="insta"><img
+                src="src/insta1.png" class="insta"></a>
+            <a href="https://github.com/AshishRastogi123/Ashish-Kumar-Rastogi" class="insta"><img src="src/twitter.png"
+                class="insta"></a>
+            <a href="https://www.facebook.com/profile.php?id=100078185538436" class="insta"><img src="src/facebook.png"
+                class="insta"></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Feedback</h5>
+          <form>
+            <div class="mb-3">
+              <label for="feedbackEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="feedbackEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="feedbackMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="feedbackMessage" rows="3" placeholder="Share your feedback"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <h5 class=" social-icons">Get Our App</h5>
+      <div class="store-buttons social-icons">
+        <a href="https://play.google.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Google Play Store">
+        </a>
+        <a href="https://www.apple.com/app-store/" target="_blank">
+          <img src="src/apple1.jpg" alt="Apple App Store">
+        </a>
+      </div>
+    </div>
+    <!-- Feedback Section -->
+    <hr class="my-4">
+    <!-- Copyright -->
+    <div class="text-center">
+      <p>© 2025 Food Ordering. All rights reserved.</p>
+    </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
