@@ -31,5 +31,5 @@ src/                 # Image assets
 ## Screenshots
 ![Homepage Screenshot](src/food1.jpg)
 
-## License
-This project is for educational purposes. You can modify and use it as needed.
+
+
